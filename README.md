@@ -15,10 +15,26 @@ With the combination of a raspberry pi and a PaPiRus display, this app will allo
   3. Choose B2 Console Autologin
 5. Get to-do-ing!
 
-#### PaPiRus bug
-You may find that after installing PaPiRus everything will work fine, however when you restart all of the commands cause errors. The solution to this is to add the following to your .bashrc: `sudo service epd-fuse start`
+### PaPiRus bugs I've come across.
+
+#### Restarting the pi stops all functions working.
+
+  *Solution*
   
-I've let them know about this bug on their repo with this solution, but this hasn't been fixed yet.
+  Add the following to your .bashrc:
+  
+  ```sudo service epd-fuse start```
+  
+#### PapirusImage using image.write('blah.jpg')
+  
+  ```NameError: global name 'epd' is not defined```
+  
+  *Solution*
+  
+    1. Head to `/usr/local/lib/python2.7/dist-packages/papirus`
+    2. `sudo nano image.py`
+    3. Add `from epd import EPD` to the list of import.
+    4. And add `epd = EPD()` within the write() funtion.
 
 
 ## Resources
