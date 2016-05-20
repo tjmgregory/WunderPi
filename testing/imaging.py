@@ -7,5 +7,3 @@ def draw(string):
 	draw.text((10, 0), string, (0,0,0), font=font)
 	img_resized = image.resize((264,176), Image.ANTIALIAS)
 	image.save('sample-out2.jpg')
-
-draw("Cack")
