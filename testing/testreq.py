@@ -4,16 +4,17 @@ from papirus import PapirusText
 
 api = wunderpy2.WunderApi()
 
+# Collects the API keys from a json file, which you have to fill in yourself.
 apikeys = ""
 with open('apikeys.json') as data:
 	apikeys = json.load(data)
-print apikeys
-
 token = apikeys["token"]
 clientid = apikeys["clientid"]
 
+# Sets up the client so requests can be made.
 client = api.get_client(token, clientid)
 
+# Compiles the title of all the tasks into a list.
 def getAllTasks():
 	allTasks = []
 	lists = client.get_lists()
@@ -24,16 +25,17 @@ def getAllTasks():
 
 	return allTasks
 
-tasks = getAllTasks()
-
+# Converts the list of titles into the screen output.
 def toBullets(items):
 	final = ""
 	for item in items:
 		final += " - " + item + "\n"
 	return final
 
+# Performs necessary methods.
+tasks = getAllTasks()
 screenOutput = toBullets(tasks)
-print screenOutput
 
+# Writes output to the screen.
 textScreen = PapirusText()
 textScreen.write(screenOutput)
