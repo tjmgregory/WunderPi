@@ -8,7 +8,7 @@ With the combination of a raspberry pi and a PaPiRus display, this app will allo
 
 1. Get yourself a Raspberry Pi and a PaPiRus display.
 2. Follow the PaPiRus software installation instructions at: https://github.com/PiSupply/PaPiRus
-3. Install wunderpy2 by following the instrucitons here: https://pypi.python.org/pypi/wunderpy2/0.1.4
+3. Install wunderpy2 by following the instructions here: https://pypi.python.org/pypi/wunderpy2/0.1.4
 4. Get to-do-ing!
 
 ### Resources
