@@ -1,6 +1,8 @@
 import wunderpy2
 import json
-from papirus import PapirusText
+from imaging import draw
+from papirus import Papirus
+from papirus import PapirusImage
 
 api = wunderpy2.WunderApi()
 
@@ -29,17 +31,13 @@ def getAllTasks():
 
 	return allTasks
 
-# Converts the list of titles into the screen output.
-def toBullets(items):
-	final = ""
-	for item in items:
-		final += " - " + item + "\n"
-	return final
-
 # Performs necessary methods.
 tasks = getAllTasks()
-screenOutput = toBullets(tasks)
+draw(tasks, "test")
 
 # Writes output to the screen.
-textScreen = PapirusText()
-textScreen.write(screenOutput)
+#textScreen = PapirusText()
+#textScreen.write(screenOutput)
+
+imageScreen = PapirusImage()
+imageScreen.write('test.jpg')
