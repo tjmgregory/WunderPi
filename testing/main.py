@@ -4,7 +4,11 @@ from papirus import PapirusText
 
 api = wunderpy2.WunderApi()
 
-# Collects the API keys from a json file, which you have to fill in yourself.
+# Collects the API keys from a json file, which you will need to create yourself in this format:
+#	{
+#		"token": "YOUR ACCESS TOKEN HERE",
+#		"clientid": "YOUR CLIENT ID HERE"
+#	}
 apikeys = ""
 with open('apikeys.json') as data:
 	apikeys = json.load(data)
