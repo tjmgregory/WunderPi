@@ -12,6 +12,6 @@ With the combination of a raspberry pi and a PaPiRus display, this app will allo
 4. Get to-do-ing!
 
 ### Resources
-* Raspberry Pi - raspberrypi.org
-* PaPiRus - papirus.ws
-* Wunderlist - wunderlist.com
+* Raspberry Pi - https://raspberrypi.org
+* PaPiRus - http://papirus.ws
+* Wunderlist - https://wunderlist.com
