@@ -19,22 +19,22 @@ With the combination of a raspberry pi and a PaPiRus display, this app will allo
 
 #### Restarting the pi stops all functions working.
 
-  *Solution*
+*Solution*
   
-  Add the following to your .bashrc:
+Add the following to your .bashrc:
   
-  ```sudo service epd-fuse start```
+```sudo service epd-fuse start```
   
 #### PapirusImage using image.write('blah.jpg')
   
-  ```NameError: global name 'epd' is not defined```
+```NameError: global name 'epd' is not defined```
   
-  *Solution*
+*Solution*
   
-    1. Head to `/usr/local/lib/python2.7/dist-packages/papirus`
-    2. `sudo nano image.py`
-    3. Add `from epd import EPD` to the list of import.
-    4. And add `epd = EPD()` within the write() funtion.
+1. Head to `/usr/local/lib/python2.7/dist-packages/papirus`
+2. `sudo nano image.py`
+3. Add `from epd import EPD` to the list of import.
+4. And add `epd = EPD()` within the write() funtion.
 
 
 ## Resources
