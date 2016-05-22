@@ -2,7 +2,7 @@ from PIL import Image, ImageFont, ImageDraw
 import json
 import textwrap
 
-indent = 20
+indent = 10
 textSize = 18
 spacing = 6
 font = ImageFont.truetype("courier-new.ttf", textSize)

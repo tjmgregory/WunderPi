@@ -1,6 +1,6 @@
 import wunderpy2
 import json
-from imaging-multiple import draw
+from imaging import draw
 from papirus import Papirus
 from papirus import PapirusImage
 

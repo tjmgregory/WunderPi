@@ -1,2 +1,3 @@
 apikeys.json
 .DS_Store
+*.pyc
