@@ -36,7 +36,3 @@ def split(content):
 		holder.append(wrapped)
 
 	return holder
-
-
-testSplit = ["A nice big long string to test","Another long one because fun", "Test", "Test 2","Test 3","Test 4","Falls off the bottom"]
-draw(testSplit, "bant")

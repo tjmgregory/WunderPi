@@ -1,6 +1,6 @@
 import wunderpy2
 import json
-from imaging import draw
+from imaging-multiple import draw
 from papirus import Papirus
 from papirus import PapirusImage
 
@@ -34,10 +34,6 @@ def getAllTasks():
 # Performs necessary methods.
 tasks = getAllTasks()
 draw(tasks, "test")
-
-# Writes output to the screen.
-#textScreen = PapirusText()
-#textScreen.write(screenOutput)
 
 imageScreen = PapirusImage()
 imageScreen.write('test.jpg')
