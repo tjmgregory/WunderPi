@@ -1,1 +1,28 @@
-nohup: ignoring input
+Traceback (most recent call last):
+  File "/home/pi/WunderPi/code/main.py", line 60, in <module>
+    s.run()
+  File "/usr/lib/python2.7/sched.py", line 117, in run
+    action(*argument)
+  File "/home/pi/WunderPi/code/main.py", line 50, in running
+    tasks = getAllTasks()
+  File "/home/pi/WunderPi/code/main.py", line 32, in getAllTasks
+    tasks = client.get_tasks(list["id"])
+  File "/usr/local/lib/python2.7/dist-packages/wunderpy2/wunderclient.py", line 69, in get_tasks
+    return tasks_endpoint.get_tasks(self, list_id, completed=completed)
+  File "/usr/local/lib/python2.7/dist-packages/wunderpy2/tasks_endpoint.py", line 24, in get_tasks
+    response = client.authenticated_request(client.api.Endpoints.TASKS, params=params)
+  File "/usr/local/lib/python2.7/dist-packages/wunderpy2/wunderclient.py", line 45, in authenticated_request
+    return self.api.request(endpoint, method=method, headers=headers, params=params, data=data)
+  File "/usr/local/lib/python2.7/dist-packages/wunderpy2/wunderapi.py", line 76, in request
+    self._validate_response(method, response)
+  File "/usr/local/lib/python2.7/dist-packages/wunderpy2/wunderapi.py", line 40, in _validate_response
+    raise ValueError('{} {}'.format(response.status_code, str(response.json())))
+  File "/usr/lib/python2.7/dist-packages/requests/models.py", line 793, in json
+    return json.loads(self.text, **kwargs)
+  File "/usr/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
